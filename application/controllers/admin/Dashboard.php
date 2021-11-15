@@ -3,10 +3,10 @@
 Class Dashboard extends CI_Controller {
     public function index(){
         $data['title'] = 'Dashboard';
-        $pegawai = $this->db->query('SELECT * FROM dataPegawai');
-        $admin = $this->db->query('SELECT * FROM dataPegawai where jabatan = "admin"');
-        $jabatan = $this->db->query('SELECT * FROM dataJabatan');
-        $kehadiran = $this->db->query('SELECT * FROM dataKehadiran');
+        $pegawai = $this->db->query('SELECT * FROM data_pegawai');
+        $admin = $this->db->query('SELECT * FROM data_pegawai where jabatan = "admin"');
+        $jabatan = $this->db->query('SELECT * FROM data_jabatan');
+        $kehadiran = $this->db->query('SELECT * FROM data_kehadiran');
         
         $data['pegawai'] = $pegawai->num_rows();
         $data['admin'] = $admin->num_rows();
