@@ -4,7 +4,6 @@ class dataJabatan extends CI_Controller{
 
     public function index()
     {
-        
         $this->load->library('session');
         $data['title']= "Data Jabatan";
         $data['jabatan']= $this->PenggajianModel->get_data('data_jabatan')->result();
